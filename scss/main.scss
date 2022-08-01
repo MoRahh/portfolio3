@@ -29,6 +29,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     transform: translateX(1000%);
+    display: none;
     transition: all .5s ease;
 
     li {
