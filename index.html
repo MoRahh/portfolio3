@@ -12,6 +12,27 @@
 </head>
 
 <body>
+
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo2.png" alt="">
+            </div>
+
+            <div class="links">
+                <ul>
+                    <li><a class="box-shadow" href="#" class="aboutnav">Work</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
     <div class="mobile-nav">
         <i class="fa-solid fa-xmark closenav"></i>
         <ul>
@@ -30,7 +51,6 @@
         </div>
 
         <div class="mobile-nav-icon">
-            <div class="language">EN</div>
             <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="50px">
                 <path
                     d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
@@ -58,17 +78,17 @@
 
         <h1 class="title">
             <span class="html-tags">&lt;h1&gt;</span> <br>
-            My Projects <br>
-            <span class="html-tags">&lt;/h1&gt;</span>
+            My Projects
+
         </h1>
 
 
-        <p class="desc"><span class="html-tags">&lt;p1&gt;</span> <br> Some of my recent Projects Chosen by me, Some of
+        <p class="desc reveal">Some of my recent Projects Chosen by me, Some of
             them
             I created in the purpose of
             practicing
             JavaScript so some of them wont have good styling.</p>
-        <p class="desc">If you want to see more of my work you can always Email me. Or check my github at <a
+        <p class="desc reveal">If you want to see more of my work you can always Email me. Or check my github at <a
                 href="https://github.com/MoRahh">github.com/MoRahh.</a> <br><span class="html-tags">&lt;/p1&gt;</span>
         </p>
 
@@ -139,38 +159,36 @@
 
         <div class="text">
 
-            <h1 class="about-title "><span class="html-tags">&lt;h1&gt;</span><br>Me, Myself, And I <br> <span
-                    class="html-tags">&lt;/h1&gt;</span></h1>
-            <p class="desc desc3"> <span class="html-tags">&lt;p1&gt;</span> <br>Passionate Web Developer able to build
+            <h1 class="about-title ">Me, Myself, And I </h1>
+            <p class="desc"> Passionate Web Developer able to build
                 a Web
                 Presence from the ground up, From
                 Concept,
                 Navigation, Layout
                 and
                 Programming to UX and SEO.</p>
-            <p class="desc desc4">Skilled at writing well-designed, testable and efficient code using current best
+            <p class="desc">Skilled at writing well-designed, testable and efficient code using current best
                 practices
                 In
                 Web
-                Development. <br> <span class="html-tags">&lt;p1&gt;</span></p>
+                Development. </p>
         </div>
 
         <div class="experience">
 
-            <h1 class="title"><span class="html-tags">&lt;h1&gt;</span><br>Experience <br><span
-                    class="html-tags">&lt;h1&gt;</span></h1>
+            <h1 class="title">Experience</h1>
 
             <div class="experience-grid">
                 <div class="experiencebg reveal2">EXPERIENCE</div>
                 <span class="html-tags">&lt;section1&gt;</span>
-                <div class="card">
+                <div class="card reveal">
                     <h4 class="company">KUTEZ CNC · July 2022</h4>
                     <p class="job-title">Frontend Web Developer</p>
                     <p class="job-desc">- Developing, maintaining and optimizing the website using HTML/CSS/JavaScript.
                     </p>
                     <p class="job-desc">- Working on adding new and creative features.</p>
                 </div>
-                <div class="card">
+                <div class="card reveal2">
                     <h4 class="company">FREELANCE WEB DEVELOPER · May 2022</h4>
                     <p class="job-title">Full Stack Web Developer</p>
                     <p class="job-desc">- Coding design mockups into pixel perfect, tableless, cross browser compatible,
@@ -184,8 +202,36 @@
             </div>
         </div>
     </div>
+    <div class="wrapper centered reveal">
+
+        <article class="letter">
+            <div class="side">
+                <h1 class="contact-h1">Contact us</h1>
+                <p class="contact-p">
+                    <textarea placeholder="Your message"></textarea>
+                </p>
+            </div>
+            <div class="side">
+                <p class="contact-p">
+                    <input type="text" placeholder="Your name">
+                </p>
+                <p class="contact-p">
+                    <input type="email" placeholder="Your email">
+                </p>
+                <p class="contact-p">
+                    <button id="sendLetter">Send</button>
+                </p>
+            </div>
+        </article>
+        <div class="envelope front"></div>
+        <div class="envelope back"></div>
+    </div>
+
+
+
 
 
 </body>
+<script src="js/index.js"></script>
 
 </html>
