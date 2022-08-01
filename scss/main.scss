@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.active {
+    transform: translateX(0) !important;
+}
+
+.mobile-nav {
+    background: wheat;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(100%);
+
+    li {
+        display: block;
+        padding: 20px 0;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            opacity: 0.5;
+            transition: all .5s ease;
+        }
+
+    }
+
+    li:hover a {
+        opacity: 1;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    .closenav {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-size: 30px;
+        opacity: 0.5;
+        transition: all .3s ease;
+    }
+
+    .closenav:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid rgba(128, 128, 128, .20);
+
+    .logo p {
+        color: white;
+        font-weight: 1000;
+        letter-spacing: 1.5px;
+        font-size: 18px;
+        opacity: 1;
+        transition: all 0.3s ease;
+        transition: text-decoration-color 300ms;
+    }
+
+    .logo p span {
+        color: purple;
+    }
+
+    .logo:hover p {
+        cursor: pointer;
+        text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    }
+
+    .mobile-nav-icon:hover {
+        cursor: pointer;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobile-nav-icon {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        .language {
+            color: white;
+            font-weight: 500;
+        }
+    }
+}
+
+.homepage {
+    color: white;
+    padding: 20px;
+
+
+    .big {
+        font-size: 50px;
+        color: white;
+    }
+
+    .small {
+        font-size: 13px;
+        letter-spacing: .3em;
+        color: gray;
+        margin-top: 40px;
+    }
+
+    button {
+        padding: 10px 30px;
+        background: none;
+        color: aqua;
+        border-color: aqua;
+        font-family: 'La Belle Aurore', cursive;
+        font-size: 20px;
+        margin-top: 30px;
+        animation: 2s ease-out 0s 1 upDown;
+        transition: all .3s ease;
+    }
+
+    button:hover {
+        background-color: aqua;
+        cursor: pointer;
+        color: black;
+        border-color: black;
+    }
+}
+
+.html-tags {
+    font-size: 16px;
+    font-family: 'La Belle Aurore', cursive;
+    text-transform: lowercase;
+    color: rgba(128, 128, 128, .50);
+}
+
+.one {
+    animation: 1s ease-out 0s 1 leftToRight;
+}
+
+.two {
+    animation: 1.3s ease-out 0s 1 rightToLeft;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.three {
+    animation: 1.6s ease-out 0s 1 leftToRight;
+}
+
+.four {
+    animation: 2s ease-out 0s 1 upDown;
+}
+
+.projects-container {
+    margin-top: 100px;
+    padding: 10px;
+    position: relative;
+
+    .title {
+        color: aqua;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+
+
+    }
+
+    .work {
+        color: rgba(128, 128, 128, .05);
+        font-size: 150px;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        font-weight: 1000;
+        z-index: -1;
+    }
+
+    .desc {
+        color: white;
+
+        a {
+            text-decoration: none;
+            color: purple;
+            font-weight: 1000;
+            transition: all .3s ease;
+        }
+
+        a:hover {
+            color: aqua;
+        }
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 0;
+
+        .project {
+            position: relative;
+            transition: all .3s ease;
+        }
+
+        .project img {
+            width: 100%;
+        }
+
+        .project .overlay {
+            position: absolute;
+            top: 28%;
+            left: 27%;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            padding: 90px 20px;
+            background-color: rgba(0, 136, 255, 0.475);
+            border-radius: 10px;
+            font-weight: 300;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 5px;
+            transition: all .5s ease;
+        }
+
+        .project:hover img {
+            opacity: 0.3;
+        }
+
+        .project:hover .overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+
+.about {
+    position: relative;
+    padding: 20px;
+
+    .about-title {
+        color: aqua;
+        font-size: 30px;
+
+        letter-spacing: .1em;
+    }
+
+    .desc {
+        color: white;
+        font-size: 13px;
+        width: 90%;
+        font-weight: 500;
+    }
+}
+
+.experience {
+    margin-top: 50px;
+
+    .title {
+        color: aqua;
+        font-weight: 800;
+    }
+
+    .experience-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .card {
+            background-color: rgba(128, 128, 128, .20);
+            border-radius: 20px;
+            padding: 0 30px;
+
+            .company {
+                color: rgba(7, 96, 138, 0.831);
+
+            }
+
+            .job-title {
+                color: aqua;
+                margin-bottom: 30px;
+                font-size: 10px;
+                margin-top: -20px;
+            }
+
+            .job-desc {
+                color: white;
+                font-size: 13px;
+
+            }
+        }
+    }
+}
+
+.experiencebg {
+    color: rgba(128, 128, 128, .10);
+    font-size: 90px;
+    position: absolute;
+    right: 0;
+    font-weight: 1000;
+    z-index: -1;
+    top: 450px;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+@keyframes upDown {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes m {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes md {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appearm {
+    from {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}
